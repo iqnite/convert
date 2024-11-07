@@ -4,7 +4,7 @@ const ytdl = require("ytdl-core");
 const fs = require("fs");
 const path = require("path");
 
-// Route base/youtube
+// Route is base/youtube
 router.route("/gettitle").post(async (req, res) => {
   try {
     const videoUrl = req.body.link;
@@ -20,7 +20,7 @@ router.route("/gettitle").post(async (req, res) => {
   }
 });
 
-router.route("/downloadvideo", async (req, res) => {
+router.route("/downloadvideo").post(async (req, res) => {
   try {
     const videoUrl = req.body.link;
     if (!ytdl.validateURL(videoUrl)) {
