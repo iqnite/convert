@@ -27,7 +27,7 @@ router.route("/downloadvideo").post(async (req, res) => {
       return res.status(500).send("Invalid URL");
     }
     const options = {
-      quality: "highestVideo",
+      quality: "highestvideo",
       filter: "videoandaudio",
     };
     const info = await ytdl.getInfo(videoUrl);
